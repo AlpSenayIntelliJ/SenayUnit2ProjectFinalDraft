@@ -7,11 +7,11 @@ public class LinearEquation {
 
 
 // constructor
-public LinearEquation(int x1, int y1, int x2, int y2) {
-    this.x1 = x1;
-    this.y1 = y1;
-    this.x2 = x2;
-    this.y2 = y2;
+    public LinearEquation(int x1, int y1, int x2, int y2) {
+        this.x1 = x1;
+        this.y1 = y1;
+        this.x2 = x2;
+        this.y2 = y2;
 }
 
 
@@ -70,7 +70,7 @@ public LinearEquation(int x1, int y1, int x2, int y2) {
             } else {
                 if (yint < 0) {
                     if (slope == 0) {
-                        return"y = -" + Math.abs(roundedToHundredth(yint));
+                        return"y = -" + (int) (Math.abs(roundedToHundredth(yint)));
                     } else if (slope < 0) {
                         return"y = -" + (int) (Math.abs(roundedToHundredth(slope))) + "x - " + Math.abs(roundedToHundredth(yint));
                     } else {
@@ -80,9 +80,9 @@ public LinearEquation(int x1, int y1, int x2, int y2) {
                     if (slope == 0) {
                         return"y = 0";
                     } else if (slope < 0) {
-                        return"y = -" + Math.abs(roundedToHundredth(slope)) + "x";
+                        return"y = -" + (int) (Math.abs(roundedToHundredth(slope))) + "x";
                     } else {
-                        return"y = " + roundedToHundredth(slope) + "x";
+                        return"y = " + (int) (Math.abs(roundedToHundredth(slope))) + "x";
                     }
                 } else {
                     if (slope == 0) {
@@ -100,10 +100,10 @@ public LinearEquation(int x1, int y1, int x2, int y2) {
                     return"y = -" + Math.abs(roundedToHundredth(yint));
                 } else if (slope < 0) {
                     return"y = -" + Math.abs(slopen) + "/" + Math.abs(sloped)
-                            + "x - " + roundedToHundredth(yint);
+                            + "x - " + Math.abs(roundedToHundredth(yint));
                 } else {
                     return"y = " + Math.abs(slopen) + "/" + Math.abs(sloped)
-                            + "x - " + roundedToHundredth(yint);
+                            + "x - " + Math.abs(roundedToHundredth(yint));
                 }
             } else if (yint == 0) {
                 if (slope == 0) {
@@ -140,7 +140,7 @@ public LinearEquation(int x1, int y1, int x2, int y2) {
         double slope = (double) slopen/sloped;
         double yint = y1 - ((slope)*x1);
         double yVal = ((xValue*slope) + yint);
-        return"(" + roundedToHundredth(xValue) + ", " + roundedToHundredth(yVal) + ")";
+        return"\nThe point on the line is: (" + roundedToHundredth(xValue) + ", " + roundedToHundredth(yVal) + ")";
     }
 
 
