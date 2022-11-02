@@ -1,11 +1,12 @@
 public class LinearEquation {
+    // instance variables
     private int x1;
     private int y1;
     private int x2;
     private int y2;
 
 
-
+// constructor
 public LinearEquation(int x1, int y1, int x2, int y2) {
     this.x1 = x1;
     this.y1 = y1;
@@ -14,7 +15,7 @@ public LinearEquation(int x1, int y1, int x2, int y2) {
 }
 
 
-
+// methods
     public double distance() {
         double distance = Math.sqrt(Math.pow((x2-x1),2)+Math.pow((y2-y1),2));
         return roundedToHundredth(distance);
@@ -43,7 +44,7 @@ public LinearEquation(int x1, int y1, int x2, int y2) {
 
 
 
-
+// equation method with all tedious specifications
     public String equation() {
         int slopen = y2 - y1;
         int sloped = x2 - x1;
@@ -132,7 +133,7 @@ public LinearEquation(int x1, int y1, int x2, int y2) {
 
 
 
-
+// user x value, finding the coords
     public String coordinateForX(double xValue) {
         int slopen = y2 - y1;
         int sloped = x2 - x1;
@@ -146,14 +147,14 @@ public LinearEquation(int x1, int y1, int x2, int y2) {
 
 
 
-
+// rounding method used for many other methods
     public double roundedToHundredth(double toRound) {
         return Math.round(toRound*100)/100.0;
     }
 
 
 
-
+// info statement printing
     public String lineInfo() {
         return"\nThe two points are: (" + x1 + ", " + y1 + ") and (" + x2 + ", " + y2 + ")\nThe equation of the line between these points is: " + equation() + "\nThe slope" +
                 " of the line is: " + slope() + "\nThe y-intercept of the line is: " + yIntercept() + "\nThe distance between the two points is: " + distance();
