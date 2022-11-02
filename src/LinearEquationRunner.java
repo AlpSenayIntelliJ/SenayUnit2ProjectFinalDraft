@@ -22,8 +22,8 @@ public class LinearEquationRunner {
         equation.lineInfo();
 
         System.out.print("Enter a value for x: ");
-        double userx = scan.nextDouble();
-        equation.coordinateForX(userx);
+        double userXValue = scan.nextDouble();
+        equation.coordinateForX(userXValue);
     }
 }
 
