@@ -1,7 +1,7 @@
 import java.util.Scanner;
 public class LinearEquationRunner {
     public static void main(String[] args) {
-        // scanning coordinates
+        // scanning coordinates from user
         Scanner scan = new Scanner(System.in);
         System.out.print("Welcome!\nEnter coordinate 1: ");
         String coord1 = scan.nextLine();
